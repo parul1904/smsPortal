@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 	            showAll: "Show all",
 	            showNone: "Show none",
 				order: 'alpha',
-				"buttonText": "columns <img src=\"/datatableServersideExample/images/caaret.png\"/>"
+				"buttonText": "columns <img src=\"/smsPortal/images/caaret.png\"/>"
 	        },
 		    "language": {
 	            "infoFiltered": ""
@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 							],
 						bUseColVis: true
 			   }).fnSetFilteringDelay();
-			$("#personTable_length").hide();
+			$("#dataTable_length").hide();
 			$("div.toolbar").append('<div class="btn-group" style="padding:5px "><button class="btn btn-default" id="refreshbtn" style="background:none;border:1px solid #ccc;height:30px" type="button"><span class="glyphicon glyphicon-refresh" style="padding:3px"></span></button></div>');
 			   $("div.toolbar").css("float","right");
 			   $('#refreshbtn').click(function(){

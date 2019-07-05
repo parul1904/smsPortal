@@ -2,18 +2,12 @@ package com.smsPortal.controllers;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.smsPortal.model.Contact;
-import com.smsPortal.repository.ContactRepository;
 import com.smsPortal.service.ContactService;
 
 /**
@@ -22,8 +16,9 @@ import com.smsPortal.service.ContactService;
 @RestController
 public class ContactController {
 
-	@Autowired
-	ContactRepository contactRepository;
+	/*
+	 * @Autowired ContactRepository contactRepository;
+	 */
 
 	@Autowired
 	ContactService contactService;
@@ -34,10 +29,10 @@ public class ContactController {
 		return new ModelAndView("/index", "contacts", contactList);
 	}
 
-	@PostMapping("/contacts")
-	public Contact createContact(@Valid @RequestBody Contact contact) {
-		return contactRepository.save(contact);
-	}
+	/*
+	 * @PostMapping("/contacts") public Contact createContact(@Valid @RequestBody
+	 * Contact contact) { return contactRepository.save(contact); }
+	 */
 
 	/*
 	 * @PutMapping("/contact/{groupId}") public Group

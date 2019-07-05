@@ -179,7 +179,7 @@
           <div class="card-body">
             <div class="table-responsive">
             <table width="100%" border="0" margin="0" padding="0" 
-			class="row-border tableHeader" id="personTable">                <thead>
+			class="row-border tableHeader" id="dataTable">                <thead>
 				 <tr>
                                             <th>Contact Id</th>
                                             <th>First Name</th>
