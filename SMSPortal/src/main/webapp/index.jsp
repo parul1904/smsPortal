@@ -6,31 +6,22 @@
 	var path = '${pageContext.request.contextPath}';
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="css/sb-admin.css" rel="stylesheet">
 <link href="http://cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
-<link href="http://datatables.net/release-datatables/extensions/ColVis/css/dataTables.colVis.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
-<script src="http://datatables.net/release-datatables/extensions/ColVis/js/dataTables.colVis.js"></script>
-<script src="http://jquery-datatables-column-filter.googlecode.com/svn/trunk/media/js/jquery.dataTables.columnFilter.js"></script>
 <script type="text/javascript" src="js/custom-datatable.js"></script>
 <script type="text/javascript" src="plugin/fnStandingRedraw.js"></script>
-<script type="text/javascript" src="plugin/fnSetFilteringDelay.js"></script>
+<script type="text/javascript" src="plugin/fnSetFilteringDelay.js"></script><!-- Custom fonts for this template-->
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <title>SB Admin - Dashboard</title>
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
 </head>
+
 
 <body id="page-top">
 
@@ -72,10 +63,10 @@
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav">
 			<li class="nav-item active"><a class="nav-link"
-				href="index.html"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span>
+				href="contacts"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span>
 			</a></li>
 
-			<li class="nav-item"><a class="nav-link" href="/groups">
+			<li class="nav-item"><a class="nav-link" href="groups">
 					<i class="fas fa-fw fa-chart-area"></i> <span>Groups</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link" href="tables.html">
@@ -184,9 +175,10 @@
                                             <th>Contact Id</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
-                                            <th>Contact 1</th>
-                                            <th>Contact 2</th>
+                                            <th>Title</th>
+                                            <th>City</th>
 											<th>Group</th>
+											<th>Edit</th>
                                         </tr>
 			</thead>
 			<tfoot>
@@ -194,9 +186,10 @@
                                             <th>Contact Id</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
-                                            <th>Contact 1</th>
-                                            <th>Contact 2</th>
+                                            <th>Title</th>
+                                            <th>City</th>
 											<th>Group</th>
+											<th>Edit</th>
                                         </tr>
 		   </tfoot>
 			<tbody>

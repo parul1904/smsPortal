@@ -84,7 +84,7 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
 		INITIAL = start;
 
 		try {
-			jsonResult = getContactDetails(totalRecords, request);
+			jsonResult = getContactDetails(totalRecords, request, response);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -98,8 +98,10 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
 
 	}
 
-	public JSONObject getContactDetails(int totalRecords, HttpServletRequest request)
-			throws SQLException, ClassNotFoundException {
+	public JSONObject getContactDetails(int totalRecords, HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ClassNotFoundException, IOException {
+		
+		PrintWriter out = response.getWriter(); 
 
 		int totalAfterSearch = totalRecords;
 		JSONObject result = new JSONObject();
@@ -154,6 +156,7 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
 		// for searching
 		PreparedStatement stmt = con.prepareStatement(sql);
 		ResultSet rs = stmt.executeQuery();
+		out.println("<a href=\"singleSms.jsp?\">SMS</a>");
 
 		while (rs.next()) {
 			JSONArray ja = new JSONArray();

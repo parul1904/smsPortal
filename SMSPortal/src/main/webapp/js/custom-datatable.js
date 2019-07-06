@@ -31,6 +31,7 @@ jQuery(document).ready(function() {
 						         { type: "text" },
 		                         { type: "text" },
 		                         { type: "text" },
+		                         { type: "text" },
 							],
 						bUseColVis: true
 			   }).fnSetFilteringDelay();
