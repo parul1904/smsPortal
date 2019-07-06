@@ -24,4 +24,24 @@ public class ContactServiceImpl implements ContactService{
 		}
 		return contactList;
 	}
+
+	@Override
+	public List<Contact> loadDashboard(int page, int limit) {
+		List<Contact> contactList = new ArrayList<>();
+		try {
+			contactList = contactDao.loadDashboard(page, limit);			
+		}catch(Exception e) {			
+		}
+		return contactList;
+	}
+
+	@Override
+	public int getNumberOfRows() {
+		int numOfRows = 0;
+		try {
+			numOfRows = contactDao.getNumberOfRows();			
+		}catch(Exception e) {			
+		}
+		return numOfRows;
+	}
 }

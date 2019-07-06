@@ -9,5 +9,6 @@ import com.smsPortal.model.Group;
 public interface GroupService {
 	
 	public List<Group> showAllGroups();
+	public int totalGroups();
 
 }

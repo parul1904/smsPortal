@@ -10,5 +10,7 @@ import com.smsPortal.model.Contact;
 public interface ContactService {
 	
 	public List<Contact> showAllContacts();
+	public List<Contact> loadDashboard(int page, int limit);
+    public int getNumberOfRows();
 
 }
