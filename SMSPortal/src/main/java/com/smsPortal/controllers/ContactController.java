@@ -1,8 +1,6 @@
 package com.smsPortal.controllers;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -27,13 +25,13 @@ public class ContactController {
 
 	@Autowired
 	ContactService contactService;
-	
+
 	@Autowired
 	GroupService groupService;
 
 	@GetMapping(value = "/dashboard")
-	public ModelAndView loadDashboard(@RequestParam(value = "page") int page,
-			@RequestParam(value = "limit") int limit, Model model) {
+	public ModelAndView loadDashboard(@RequestParam(value = "page") int page, @RequestParam(value = "limit") int limit,
+			Model model) {
 		List<Contact> contactList = contactService.loadDashboard(page, limit);
 		long rows = contactService.getNumberOfRows();
 		int totalGroups = groupService.totalGroups();

@@ -30,7 +30,7 @@
 			<div class="container-fluid">
 				<div class="card mb-3">
 					<div class="card-header">
-						<i class="fas fa-table"></i> Group Details
+						<i class="fas fa-table"></i> Contact Details from Group: ?
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">
@@ -38,20 +38,19 @@
 								cellspacing="0">
 								<thead>
 									<tr>
-										<th>Group Id</th>
-										<th>Group Name</th>
-										<th>Group Status</th>
-										<th>Operations</th>
+										<th>Contact Name</th>
+										<th>City</th>
+										<th>Message Number</th>
+										<th>Select Contact</th>
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach items="${groups}" var="groups">
+									<c:forEach items="${contactList}" var="contact">
 										<tr>
-											<td><c:out value="${groups.groupId}" /></td>
-											<td><c:out value="${groups.groupName}" /></td>
-											<td><c:out value="${groups.groupStatus}" /></td>
-											<td align="center"><a href="group/${groups.groupId}">Edit</a>
-											&nbsp;&nbsp;&nbsp;<a href="bulkSms/${groups.groupId}">Group SMS</a></td>
+											<td><c:out value="${contact.fistName}" /></td>
+											<td><c:out value="${contact.city}" /></td>
+											<td><c:out value="${contact.contactNo1}" /></td>
+											<td></td>
 										</tr>
 									</c:forEach>
 								</tbody>

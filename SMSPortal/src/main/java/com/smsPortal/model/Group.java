@@ -26,7 +26,7 @@ public class Group {
 	private String groupName;
 
 	@Column(name = "group_status")
-	private Long groupStatus;
+	private String groupStatus;
 
 	public Long getGroupId() {
 		return groupId;
@@ -44,11 +44,11 @@ public class Group {
 		this.groupName = groupName;
 	}
 
-	public Long getGroupStatus() {
+	public String getGroupStatus() {
 		return groupStatus;
 	}
 
-	public void setGroupStatus(Long groupStatus) {
+	public void setGroupStatus(String groupStatus) {
 		this.groupStatus = groupStatus;
 	}
 }

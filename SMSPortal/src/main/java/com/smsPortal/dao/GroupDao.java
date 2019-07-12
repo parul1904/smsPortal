@@ -12,5 +12,7 @@ public interface GroupDao {
 	public List<Group> showAllGroups();
 
 	public int totalGroups();
+	
+	public Group createGroup(Group group);
 
 }

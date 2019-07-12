@@ -8,11 +8,11 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.smsPortal.dao.ContactDao;
+import com.smsPortal.dao.SmsDao;
 import com.smsPortal.model.Contact;
 
 @Repository
-public class ContactDaoImpl implements ContactDao {
+public class SmsDaoImpl implements SmsDao {
 
 	@PersistenceContext
 	private EntityManager em;
@@ -39,14 +39,5 @@ public class ContactDaoImpl implements ContactDao {
 		Query query = em.createNativeQuery("SELECT COUNT(contact_Id) from tbl_contacts c");
 		int count = ((Number) query.getSingleResult()).intValue();  
 		return count;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Contact> showContactByGroupId(Long groupId) {
-		Query query = em.createQuery(" from Contact c WHERE c.groupId=:groupId order by c.contactId ");
-		query.setParameter("groupId", groupId);
-		List<Contact> contactList = query.getResultList();
-		return contactList;
 	}
 }

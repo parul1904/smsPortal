@@ -36,4 +36,15 @@ public class GroupServiceImpl implements GroupService{
 		}
 		return totalGroups;
 	}
+
+	@Override
+	public Group createGroup(Group group) {
+		try {
+			group = groupDao.createGroup(group);
+			
+		}catch(Exception e) {
+			
+		}
+		return group;
+	}
 }

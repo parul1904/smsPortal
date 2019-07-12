@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.smsPortal.dao.ContactDao;
 import com.smsPortal.model.Contact;
-import com.smsPortal.service.ContactService;
+import com.smsPortal.service.SmsService;
 
 @Service
-public class ContactServiceImpl implements ContactService{
+public class SmsServiceImpl implements SmsService{
 	
 	@Autowired
 	ContactDao contactDao;
@@ -43,15 +43,5 @@ public class ContactServiceImpl implements ContactService{
 		}catch(Exception e) {			
 		}
 		return numOfRows;
-	}
-
-	@Override
-	public List<Contact> showContactByGroupId(Long groupId) {
-		List<Contact> contactList = new ArrayList<>();
-		try {
-			contactList = contactDao.showContactByGroupId(groupId);			
-		}catch(Exception e) {			
-		}
-		return contactList;
 	}
 }
